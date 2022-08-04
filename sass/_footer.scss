@@ -1,0 +1,125 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $footer-background-color;
+
+  &__title {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: $footer-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.container--footer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.address,
+.join {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+}
+
+.address {
+  font-size: 14px;
+  line-height: 1.71;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 85px;
+  }
+
+  &__text {
+    // display: block;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+
+    color: $footer-color;
+  }
+
+  &__link {
+    display: block;
+
+    color: $footer-link-color;
+
+    @include hover-dely(color);
+  }
+  &__link:not(:last-child) {
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $footer-hover-color;
+  }
+}
+
+.join {
+  @media screen and (min-width: 768px) {
+    padding-top: 10px;
+  }
+}
+
+.mailing {
+  @media screen and (max-width: 479px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    min-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    padding-top: 10px;
+
+    min-width: 570px;
+  }
+
+  &__input {
+    padding: 15px 0 15px 16px;
+
+    min-width: 100%;
+    // width: calc((100% - 0 * 30px) / 1);
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+      min-width: 358px;
+    }
+
+    color: $footer-color;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    @include hover-dely(border);
+  }
+
+  &__input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: $footer-placeholder-color;
+  }
+}

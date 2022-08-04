@@ -1,0 +1,50 @@
+.logo {
+  display: inline-block;
+
+  &--is-hide {
+    display: none;
+  }
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  font-family: $logo-font;
+  font-weight: 700;
+
+  font-size: 24px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  &__item {
+    color: $accent-color;
+  }
+
+  &__item--common {
+    color: $logo-color;
+  }
+
+  &__item--footer {
+    color: $logo-footer-color;
+  }
+
+  & > &__item {
+    @include hover-dely(color);
+  }
+
+  &:hover > &__item {
+    color: $logo-hover-color;
+  }
+
+  &--footer {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}

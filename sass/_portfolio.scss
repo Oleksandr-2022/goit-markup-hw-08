@@ -1,0 +1,154 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.filter-list {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+    &__item:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.portfolio-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 450px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 1 * 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 2 * 30px) / 3);
+
+      &:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 30px;
+      }
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+
+    border: 1px solid $border-portfolio-color;
+
+    @include hover-dely(box-shadow);
+  }
+
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__caption {
+    padding: 20px 24px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+
+    color: $title-text-color;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &__theme {
+    color: $primary-text-color;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $overlay-portfolio-color;
+
+    transform: translateY(100%);
+
+    @include hover-dely(transform);
+  }
+
+  &__link:hover &__overlay,
+  &__link:focus &__overlay {
+    transform: translateY(0);
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 322px;
+    height: 100%;
+
+    font-size: 18px;
+    line-height: 1.56;
+    color: $overlay-text-color;
+
+    transform: translate(-50%, -50%);
+  }
+}

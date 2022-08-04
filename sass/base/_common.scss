@@ -1,0 +1,121 @@
+body {
+  background-color: $main-background-color;
+  color: $primary-text-color;
+
+  font-family: $main-font;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+
+  margin-top: 60px;
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  &.menu-container--is-open {
+    overflow: hidden;
+  }
+}
+
+p,
+a,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea {
+  color: inherit;
+  border: 1px solid $border-input-color;
+  border-radius: 4px;
+
+  @include hover-dely(border);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid $accent-color;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
+
+  color: $title-text-color;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+.occupation {
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.occupation-list {
+  display: flex;
+
+  &__thumb {
+    position: relative;
+  }
+
+  &__caption {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+
+    height: 70px;
+
+    background: $occupation-background-color;
+
+    color: $occupation-caption-color;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
